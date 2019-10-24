@@ -2,7 +2,7 @@ const mongoose = require ('mongoose');
 
 function conectaMongoDb(){
     mongoose.connect(
-        'mongo://web12345@ds135128.mlab.com:35128/aula-web',
+        'mongodb://web12345@ds135128.mlab.com:35128/aula-web',
         {userUnifieldTopology: true, userNewUrParser: true}
 );
 
@@ -14,4 +14,4 @@ db.once('open', ()=> console.info('MongoDB conectado com sucesso!'));
 
 }
 
-module.exports = conectarMongoDB;
+module.exports = conectaMongoDb;

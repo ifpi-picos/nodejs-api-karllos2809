@@ -6,6 +6,6 @@ const conectaMongoDB = require ('./Config/mongodb')
 const app = express();
 app.use(bodyParser.json());
 app.use('/', routes); 
-conectarMongoDB();
+conectaMongoDB();
 
 app.listen(3000, ()=> console.log('app online...'))

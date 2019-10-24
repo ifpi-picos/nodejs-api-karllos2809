@@ -1,4 +1,4 @@
-class Postagem {
+class Postagens {
     constructor(postagemModel) {
         this.Postagem = postagemModel;
     }
@@ -13,6 +13,9 @@ class Postagem {
         const postagens = await this.Postagem.find({});
         return postagens;
     }
+    async alterarPorId (id, postagemDTO) {
+        await this.Postagem.updateOne({_id: id}, postagemDTO);
+    } 
 }
 
 module.exports = Postagens;
